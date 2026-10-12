@@ -1,0 +1,81 @@
+# DataLens — Data Quality Analyzer
+
+DataLens is a web-based data analysis tool that helps users upload CSV datasets, analyze data quality, identify missing values and duplicate records, clean datasets, and export reports.
+
+## Features
+
+- **CSV Upload:** Upload CSV files for analysis.
+- **Data Analysis:** View dataset dimensions and data quality metrics.
+- **Data Quality Assessment:** Identify missing values and duplicate rows.
+- **Data Cleaning:** Handle missing numerical values using median imputation and remove duplicate records.
+- **Cleaning Comparison:** Compare data quality before and after cleaning.
+- **Visualizations:** Explore dataset insights through charts and metrics.
+- **JSON Report Export:** Export analysis results and data quality information.
+- **PDF Report Export:** Generate downloadable PDF reports.
+- **Navigation:** Access the Overview, Data Quality, and Reports sections.
+
+## Technology Stack
+
+- **Frontend:** React, Vite, CSS
+- **Backend:** Python, Flask
+- **Data Input:** CSV files
+- **Report Formats:** JSON and PDF
+
+## Project Structure
+
+The project contains a frontend and a backend.
+
+- `frontend/` — React application and user interface.
+- Backend folder — Flask application and data-processing functionality.
+- `README.md` — Project documentation.
+
+## Getting Started
+
+### Prerequisites
+
+Install the required software:
+
+- Node.js and npm
+- Python
+- pip
+
+### Run the Frontend
+
+Open a terminal in the frontend directory:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open the local URL displayed in the terminal.
+
+### Run the Backend
+
+Open a separate terminal in the backend directory. Activate your Python environment, install the dependencies listed in the project's requirements file, and run the Flask application using the project's configured startup command.
+
+The exact backend command depends on the existing project configuration.
+
+## How to Use
+
+1. Start the frontend and backend.
+2. Open DataLens in your browser.
+3. Upload a valid CSV file.
+4. Analyze the dataset.
+5. Review the data quality metrics and visualizations.
+6. Clean the dataset using the available cleaning options.
+7. Compare the original and cleaned data.
+8. Export the results as JSON or PDF.
+
+## Project Objective
+
+The objective of DataLens is to make basic data quality assessment and cleaning easier through a simple, interactive web interface.
+
+## Future Improvements
+
+- Support for additional file formats.
+- More advanced data validation rules.
+- Customizable data-cleaning options.
+- Additional visualizations and analytics.
+- More comprehensive automated testing.
