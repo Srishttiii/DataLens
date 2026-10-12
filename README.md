@@ -1,4 +1,7 @@
 # DataLens — Data Analysis & Quality Dashboard
+🌐 **Live Demo:** https://data-lens-mauve.vercel.app/
+
+🚀 **Live Backend:** https://datalens-ib7j.onrender.com/api/health
 
 DataLens is a web-based data analysis dashboard designed to help users explore CSV datasets, identify data quality issues, clean data, and generate reports through a simple and interactive interface.
 
