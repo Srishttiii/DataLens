@@ -1,115 +1,107 @@
-# DataLens — Data Quality Analyzer
+# DataLens — Data Analysis & Quality Dashboard
 
-## About the Project
-
-DataLens is a web-based data quality analysis and cleaning application. It helps users upload CSV datasets, analyze data quality, identify missing values and duplicate records, clean data, and generate downloadable reports.
-
-The project provides an interactive interface to make data quality assessment easier and more understandable.
+DataLens is a web-based data analysis dashboard designed to help users explore CSV datasets, identify data quality issues, clean data, and generate reports through a simple and interactive interface.
 
 ## Features
 
-- **CSV Upload:** Upload CSV files for analysis.
-- **Dataset Analysis:** View the number of rows, columns, missing values, and duplicate rows.
-- **Data Quality Score:** Calculate a project-defined data quality score.
-- **Column Quality:** View column types, missing values, and unique values.
-- **Data Visualization:** Explore data insights using charts and metrics.
-- **Data Cleaning:** Handle missing numerical values using median or mean imputation, or use mode imputation where applicable.
-- **Duplicate Removal:** Remove exact duplicate rows.
-- **Cleaning Comparison:** Compare data quality before and after cleaning.
-- **JSON Export:** Export analysis results as a JSON report.
-- **PDF Export:** Download a PDF report.
-- **Input Validation:** Handle empty files, invalid CSV files, and unsupported file formats.
+- **CSV Upload & Analysis:** Upload CSV files and explore dataset information.
+- **Data Overview:** View key metrics and visualizations to understand your data.
+- **Data Quality Checks:** Identify missing values and duplicate records.
+- **Data Cleaning:** Handle missing values using median imputation and remove duplicate records.
+- **Interactive Dashboard:** Navigate between Overview, Data Quality, and Reports.
+- **Report Export:** Export analysis results in JSON and PDF formats.
+- **Input Validation:** Reject empty CSV files and provide a better data-processing workflow.
 
-## Technology Stack
+## Tech Stack
 
-### Frontend
+**Frontend**
 - React
 - Vite
-- CSS
 - JavaScript
+- CSS
 
-### Backend
+**Backend**
 - Python
 - Flask
-- Flask-CORS
-- Pandas
-- NumPy
+
+**Data Processing**
+- CSV-based data analysis and cleaning
 
 ## Project Structure
 
 ```text
 DataLens/
-├── frontend/
-│   ├── src/
-│   ├── package.json
-│   └── README.md
 ├── backend/
 │   └── app.py
-└── README.md
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+├── sample_data.csv
+├── README.md
+└── .gitignore
 ```
 
-*Note: The structure above shows the main project files. Additional files may exist in the project.*
-
-## Installation and Setup
+## Getting Started
 
 ### Prerequisites
 
-Install the following software:
-
-- Node.js and npm
 - Python
-- pip
+- Node.js and npm
+- Git
 
-### 1. Start the Backend
+### 1. Clone the Repository
 
-Open a terminal in the project root directory and run:
+```bash
+git clone https://github.com/Srishttiii/DataLens.git
+cd DataLens
+```
 
-```powershell
-cd backend
-python -m pip install flask flask-cors pandas numpy
+### 2. Start the Backend
+
+Activate your Python virtual environment if you have one, install the backend dependencies from the project's dependency file, and start the Flask application.
+
+```bash
 python app.py
 ```
 
-The Flask backend runs at:
+Run this command from the `backend` directory.
 
-`http://127.0.0.1:5000`
+### 3. Start the Frontend
 
-To check the backend health, open:
+Open a separate terminal and run:
 
-`http://127.0.0.1:5000/api/health`
-
-Keep this terminal running.
-
-### 2. Start the Frontend
-
-Open a **second terminal** in VS Code and run:
-
-```powershell
+```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Open the local URL displayed in the terminal to use DataLens.
+Open the local URL displayed by Vite in your terminal.
 
-## How to Use
+**Note:** Backend dependencies and configuration must be set up before running the application. Follow the project's existing dependency and configuration files.
 
-1. Start the backend and frontend.
-2. Open the DataLens application in your browser.
-3. Upload a valid CSV file.
-4. Analyze the dataset.
-5. Review data quality metrics, charts, and cleaning suggestions.
-6. Choose an available cleaning method.
-7. Compare the original and cleaned dataset.
-8. Export the analysis report as JSON or PDF.
+## Use Cases
 
-## Data Quality Metrics
+- Exploring structured CSV datasets
+- Identifying missing and duplicate records
+- Performing basic data cleaning
+- Reviewing data quality
+- Exporting analysis results for further use
 
-DataLens evaluates several aspects of a dataset:
+## Future Improvements
 
-- **Completeness:** Percentage of cells containing values.
-- **Uniqueness:** Percentage of rows remaining after accounting for exact duplicate rows.
-- **Consistency:** Validation of numeric-like values using the implemented parsing rules.
-- **Quality Score:** A project-defined score based on missing-cell and duplicate-row penalties.
+- Support for additional dataset formats
+- More advanced data quality metrics
+- Additional visualization options
+- Enhanced report customization
+
+## Author
+
+Developed as an academic project to explore data analysis, data quality assessment, and interactive dashboard development.
+
+## License
+
+No license has been specified yet.
 
 These metrics are intended for educational and analytical use. They do not guarantee that every
